@@ -1,0 +1,19 @@
+n = -4:0.1:4; % Rango de valores de n
+% Generar las secuencias exponenciales
+secuencia_creciente = exp(7*n);
+secuencia_decreciente = exp(-7*n);
+% Graficar utilizando la función stem
+subplot(2, 1, 1);
+stem(n, secuencia_creciente, 'filled');
+xlabel('n');
+ylabel('Amplitud');
+title('Secuencia Exponencial Creciente');
+grid on;
+subplot(2, 1, 2);
+stem(n, secuencia_decreciente, 'filled');
+xlabel('n');
+ylabel('Amplitud');
+title('Secuencia Exponencial Decreciente');
+grid on;
+% Ajustar espaciado entre subgráficos
+sgtitle('Graficando Secuencias Exponenciales Creciente y Decreciente');

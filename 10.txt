@@ -1,0 +1,18 @@
+% Parámetros
+x = 7;
+fs = 20 * x; % Frecuencia de muestreo en Hz
+Ts = 1 / fs; % Período de muestreo en segundos
+n = 0:100;   % Vector de índices de la secuencia discreta
+
+% Frecuencia angular de la señal continua y la muestreada
+omega_0 = 2 * pi * x * Ts;
+Omega_0 = 2 * pi * x;
+
+% Secuencia discreta x[n]
+x_n = cos(omega_0 * n);
+
+% Graficar la secuencia x[n]
+stem(n, x_n, 'filled');
+xlabel('n');
+ylabel('x[n]');
+title('Secuencia muestreada x[n]');

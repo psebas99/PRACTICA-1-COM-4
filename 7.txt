@@ -1,0 +1,12 @@
+% Parámetros de la señal
+frecuencia = 70;
+% Rango de valores de n
+n = -0.125:0.001:0.125;
+% Función a graficar
+secuencia = sin(2*pi*frecuencia*n) .* exp(-7*n);
+% Parámetros de la gráfica
+stem(n, secuencia, "filled");
+xlabel('n');
+ylabel('X[n]');
+title('Secuencia Senoidal Amortiguada Exponencial');
+grid on;

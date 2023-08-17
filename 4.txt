@@ -1,0 +1,13 @@
+% Parámetros de la señal
+frecuencia = 70; % Frecuencia en Hz
+ciclo_de_trabajo = 50; % Porcentaje
+% Definir el rango de tiempo para un periodo de la señal (por ejemplo, 1 segundo)
+t = 0:1/(10*frecuencia):1/70;
+% Generar la señal cuadrada
+secuencia_cuadrada = square(2*pi*frecuencia*t, ciclo_de_trabajo);
+% Graficar la señal utilizando stem
+stem(t, secuencia_cuadrada, 'filled');
+xlabel('Tiempo (s)');
+ylabel('Amplitud');
+title('Secuencia Cuadrada Periódica');
+grid on;

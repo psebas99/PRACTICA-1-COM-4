@@ -1,0 +1,13 @@
+% Parámetros de la señal senoidal
+frecuencia = 70;     % Frecuencia en Hz
+amplitud = 1;      % Amplitud
+tiempo = 0:0.0001:3/70; % Rango de tiempo
+% Generar la señal senoidal
+funcion = amplitud * sin(2*pi*frecuencia*tiempo);
+% Graficar la señal utilizando plot
+plot(tiempo, funcion);
+xlabel('Tiempo (s)');
+ylabel('Amplitud');
+title('Señal Senoidal en Tiempo Continuo');
+grid on;
+

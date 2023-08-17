@@ -1,0 +1,12 @@
+% Definir el rango de n desde -7 hasta 7
+n = -7:7;
+
+% Crear la señal de escalón que inicia en n=0 con longitud de 7 puntos
+escalon = (n >= 0) & (n < 7);
+% Graficar usando la función stem
+stem(n, escalon, 'filled');
+xlabel('n');
+ylabel('Amplitud');
+title('Escalón que Inicia en n=0 con Longitud de 7 Puntos');
+grid on;
+ 

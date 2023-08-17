@@ -1,0 +1,21 @@
+n = 0:6;              % Longitud de la secuencia
+amplitud = 1.5;       % Amplitud
+frecuencia = 0.2;     % Frecuencia angular en radianes por muestra
+% Generar la secuencia exponencial compleja
+secuencia = amplitud * exp(1i * (2*pi*frecuencia*n));
+% Graficar la parte real e imaginaria utilizando stem
+subplot(2, 1, 1);
+stem(n, real(secuencia), 'filled');
+xlabel('n');
+ylabel('Parte Real');
+title('Parte Real de la Secuencia Exponencial Compleja');
+grid on;
+subplot(2, 1, 2);
+stem(n, imag(secuencia), 'filled');
+xlabel('n');
+ylabel('Parte Imaginaria');
+title('Parte Imaginaria de la Secuencia Exponencial Compleja');
+grid on;
+% Ajustar espaciado entre subgráficos
+sgtitle('Graficando Partes Real e Imaginaria de la Secuencia Exponencial Compleja');
+

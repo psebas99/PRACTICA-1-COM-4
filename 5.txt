@@ -1,0 +1,23 @@
+% Parámetros de la señal
+frecuencia = 70; % Frecuencia en Hz
+% Valores de n
+n = 0:1/(10*frecuencia):1/70;
+
+% Generar las señales sinusoidales
+seno = sin(2*pi*frecuencia*n);
+coseno = cos(2*pi*frecuencia*n);
+% Graficar usando la función stem
+subplot(2, 1, 1);
+stem(n, seno, 'filled');
+xlabel('Muestras');
+ylabel('Amplitud');
+title('Secuencia Senoidal');
+grid on;
+subplot(2, 1, 2);
+stem(n, coseno, 'filled');
+xlabel('Muestras');
+ylabel('Amplitud');
+title('Secuencia Cosenoidal');
+grid on;
+% Ajustar espaciado entre subgráficos
+sgtitle('Graficando Secuencias Senoidal y Cosenoidal');

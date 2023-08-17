@@ -1,0 +1,10 @@
+% Definir el rango de n desde -7 hasta 7
+n = -7:7;
+% Crear la señal de impulso centrado en "n-5" con magnitud 0.5
+impulso = 0.5 * (n == 5);
+% Graficar usando la función stem
+stem(n, impulso, 'filled');
+xlabel('n');
+ylabel('Amplitud');
+title('Impulso de Magnitud 0.5 Centrado en n-5');
+grid on;
